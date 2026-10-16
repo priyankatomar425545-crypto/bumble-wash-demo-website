@@ -1,0 +1,8 @@
+{
+  "name": "Bumble Wash",
+  "description": "Experience a new level of laundry care with Bumble Wash. From stubborn stains to everyday freshness.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

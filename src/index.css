@@ -1,3 +1,11 @@
+﻿@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@theme {
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -151,6 +159,10 @@ canvas {
     left: 140%;
     opacity: 0;
   }
+}
+
+.nav-btn:hover .nav-glow {
+  opacity: 1;
 }
 
 /* Card Subtle 3D Hover & Glow */
