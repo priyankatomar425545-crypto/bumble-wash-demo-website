@@ -4,7 +4,9 @@ const FRAME_COUNT = 300;
 
 function getFramePath(index: number): string {
   const padded = String(index).padStart(3, '0');
-  return `/frames/ezgif-frame-${padded}.jpg`;
+  const base = import.meta.env.BASE_URL || '/';
+  const cleanBase = base.endsWith('/') ? base : `${base}/`;
+  return `${cleanBase}frames/ezgif-frame-${padded}.jpg`;
 }
 
 export default function App() {
@@ -71,6 +73,17 @@ export default function App() {
       }, 2500);
     });
   }, [showToast]);
+
+  // Scroll to hash target on initial load if URL contains an anchor like #services-section
+  useEffect(() => {
+    if (window.location.hash) {
+      const targetId = window.location.hash.replace('#', '');
+      const timer = setTimeout(() => {
+        scrollToSection(targetId);
+      }, 350);
+      return () => clearTimeout(timer);
+    }
+  }, [scrollToSection]);
 
   // Canvas and Scroll Animation Loop
   useEffect(() => {
