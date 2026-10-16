@@ -38,6 +38,50 @@ body {
   font-style: italic;
 }
 
+/* Universal centering fallback for embedded sandboxes & Google AI Studio */
+.mx-auto, [class*="mx-auto"] {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+header {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.max-w-7xl {
+  max-width: 80rem !important;
+}
+
+.max-w-5xl {
+  max-width: 64rem !important;
+}
+
+.max-w-4xl {
+  max-width: 56rem !important;
+}
+
+.max-w-3xl {
+  max-width: 48rem !important;
+}
+
+.max-w-2xl {
+  max-width: 42rem !important;
+}
+
+/* Navigation Capsule Alignment & Spacing Fallback */
+header nav {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+  border-radius: 9999px !important;
+  background-color: rgba(23, 23, 23, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  padding: 0.375rem 0.75rem !important;
+}
+
 /* Custom Minimalist Dark Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
